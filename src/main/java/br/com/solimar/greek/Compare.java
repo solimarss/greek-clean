@@ -2,34 +2,19 @@ package br.com.solimar.greek;
 
 public class Compare {
 
-	public static boolean compare(Verse v1, Verse v2) {
-		v1 = replace(v1);
-		v2 = replace(v2);
-
-		String t1 = v1.getText();
-		String t2 = v2.getText();
-
-		t1 = removePunctuation(t1);
-		t2 = removePunctuation(t2);
-
-		//System.out.println("T1: "+t1);
-		//System.out.println("T2: "+t2);
-		
-		if (t1.equalsIgnoreCase(t2)) {
-			return true;
-		} else {
-			return false;
-		}
-
-	}
-
+	
 	private static String removePunctuation(String s) {
 		s = s.replace(".", "");
 		return s;
 	}
 
-	private static Verse replace(Verse v) {
-		String text = v.getText();
+	public static String replace(String verse) {
+		String text = verse;
+		text = text.replace('ί', 'ι');
+		text = text.replace('ά', 'α');
+		text = text.replace('ώ', 'ω');
+		text = text.replace('ύ', 'υ');
+		text = text.replace('Π', 'π');
 		/**
 		 * 
 		
@@ -61,6 +46,11 @@ public class Compare {
 		text = text.replace('ώ', 'ω');
 		
 		 */
+		
+		text = text.replace('Ἰ', 'ι');
+		text = text.replace('ό', 'ο');
+		text = text.replace('ή', 'η');
+		text = text.replace('έ', 'ε');
 		
 		text = text.replace('ἀ', 'α');
 		text = text.replace('ἁ', 'α');
@@ -182,8 +172,8 @@ public class Compare {
 		text = text.replace('ῶ', 'ω');
 		text = text.replace('ῷ', 'ω');
 	
-		v.setText(text);
-		return v;
+		
+		return text;
 	}
 
 }
