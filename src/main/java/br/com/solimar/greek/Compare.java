@@ -15,6 +15,24 @@ public class Compare {
 		text = text.replace('ώ', 'ω');
 		text = text.replace('ύ', 'υ');
 		text = text.replace('Π', 'π');
+		text = text.replace('Χ', 'χ');
+		text = text.replace('Σ', 'σ');
+		text = text.replace('Κ', 'κ');
+		text = text.replace(",", "");
+		text = text.replace("·", "");
+		text = text.replace(".", "");
+		text = text.replace("᾽", "");
+		text = text.replace('Ε', 'ε');
+		text = text.replace('Ἐ', 'ε');
+		text = text.replace('Ἀ', 'α');
+		text = text.replace("χριστος;", "χριστος;");
+		text = text.replace('Γ', 'γ');
+		text = text.replace('Ὁ', 'ο');
+		text = text.replace('Ἕ', 'ε');
+		text = text.replace('Β', 'β');
+		text = text.replace('Δ', 'δ');
+		text = text.replace('Φ', 'φ');
+		text = text.replace('Ζ', 'ζ');
 		/**
 		 * 
 		
